@@ -39,7 +39,7 @@ class Reader
             $body .= file_get_contents($v);
             $c = $this->get_lines($v);
             foreach($new_dir as $vv) {
-                if(strpos($v, $vv) !== false && in_array($this->get_ext($vv), $this->allow_ext)) {
+                if(strpos($v, $vv) !== false && in_array($this->get_ext($v), $this->allow_ext)) {
                     $a = substr($vv, strrpos($vv, DIRECTORY_SEPARATOR) + 1);
                     if(!isset($out[$a])) {
                         $out[$a] = $c;
